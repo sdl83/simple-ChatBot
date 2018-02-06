@@ -72,13 +72,14 @@ function bot(data,socket,questionNum) {
     } else {
       answer = "Cool... Cool..."
     } 
-  waitTime = 2000;
   question = name + ", serious question: How does a " + desert + ' with ' + input + ' on top sound?'
   }
   else if (questionNum == 3) {
     if(input.toLowerCase()==='good'|| input.toLowerCase()==='great' || input.toLowerCase()==='yum' || input.toLowerCase()==='wow' || input.toLowerCase()==='cool'){
+       waitTime = 2000;
       answer = 'Agreed! That sounds AMAZING!';
     } else {
+       waitTime = 3000;
       answer = "Ya... I don't know... it's not my favorite."
     } 
   waitTime = 2000;
