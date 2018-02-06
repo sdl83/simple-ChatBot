@@ -91,9 +91,9 @@ function bot(data,socket,questionNum) {
       question = 'How do you feel about creme brulee?';
     } else{
       answer='CANNOT COMPUTE! CANNOT COMPUTE! \n I\'ll ask again, I think you may have slipped on your keyboard.'
-      question = '';
       waitTime = 2000;
       questionNum--;
+      question = 'Coke or Pepsi?';
     }
   // load next question
   } 
