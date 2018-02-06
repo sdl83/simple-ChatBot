@@ -78,13 +78,13 @@ function bot(data,socket,questionNum) {
   else if (questionNum == 4) {
     if(input.toLowerCase()==='coke'|| input.toLowerCase()==='coca-cola'){
       answer = 'Yup! ' + input + ' is in fact the correct answer.';
-    }else{
+      waitTime =2000;
+    } else{
       answer='CANNOT COMPUTE! CANNOT COMPUTE! \n I\'ll ask again, I think you may have slipped on your keyboard.'
       question='';
       questionNum--;
-      waitTime =0;
+      waitTime =2000;
     }
-    waitTime =2000;
     // question = 'Whats your favorite place?';
   // load next question
   }
