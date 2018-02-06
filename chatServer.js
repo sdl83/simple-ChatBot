@@ -52,23 +52,26 @@ function bot(data,socket,questionNum) {
 /// These are the main statments that make up the conversation.
   if (questionNum == 0) {
   answer= 'Hello ' + input + ' :-)';// output response
-  waitTime =3000;
-  question = 'Let\'s get started... What color best represents your mood?';			    	// load next question
+  waitTime =2000;
+  question = 'Let\'s get started... What color are you feeling right now?';			    	// load next question
   }
   else if (questionNum == 1) {
   answer= 'Cool, let\'s get some mood lighting in here.';// output response
   socket.emit('changeBG',input.toLowerCase());
   waitTime =3000;
-  question = 'Where do you live?';			    	// load next question
+  question = 'Quick, what\'s your favor desert?';			    	// load next question
   }
   else if (questionNum == 2) {
-  answer= ' Cool! I have never been to ' + input+'.';
+  answer= 'Wow! Yum, it\'s been a while since I\'ve had ' + input +'.';
   waitTime =2000;
-  question = 'Whats your favorite Color?';			    	// load next question
+  question = 'I was also wondering... what\'s your favorite type of fruit?';			    	// load next question
   }
   else if (questionNum == 3) {
-  answer= 'Ok, ' + input+' it is.';
-  socket.emit('changeBG',input.toLowerCase());
+    if(input.toLowerCase()==='banana'|| input.toLowerCase()==='bananas'){
+      answer = 'I LOVE BANANAS!';
+    } else {
+      answer = "Cool. Cool."
+    } 
   waitTime = 2000;
   question = 'Can you still read the font?';			    	// load next question
   }
@@ -93,7 +96,7 @@ function bot(data,socket,questionNum) {
   // load next question
   }
   else{
-    answer= 'I have nothing more to say!';// output response
+    answer= 'We\'re done here! See you again soon.';// output response
     waitTime =0;
     question = '';
   }
