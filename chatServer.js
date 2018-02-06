@@ -60,7 +60,7 @@ function bot(data,socket,questionNum) {
   waitTime =2000;
   question = name + ', let\'s get started... what\'s your favorite desert?';			    	// load next question
   }
-  else if (questionNum == 1) {
+  else if (questionNum == 4) {
   answer= 'Wow! Yum, it\'s been a while since I\'ve had ' + input +'.';
   desert = input
   waitTime =3000;
@@ -73,7 +73,7 @@ function bot(data,socket,questionNum) {
       answer = "Cool... Cool..."
     } 
   waitTime = 2000;
-  question = name + ", serious question: How does a " + desert + ' with a ' + input + ' on top sound?'
+  question = name + ", serious question: How does a " + desert + ' with ' + input + ' on top sound?'
   }
   else if (questionNum == 3) {
     if(input.toLowerCase()==='good'|| input.toLowerCase()==='great' || input.toLowerCase()==='yum' || input.toLowerCase()==='wow' || input.toLowerCase()==='cool'){
@@ -84,7 +84,7 @@ function bot(data,socket,questionNum) {
   waitTime = 2000;
   question = 'Coke or Pepsi?';            // load next question
   }
-  else if (questionNum == 4) {
+  else if (questionNum == 1) {
     if(input.toLowerCase()==='coke'|| input.toLowerCase()==='coca-cola'){
       answer = 'Yup! ' + input + ' is in fact the correct answer.';
       waitTime =2000;
