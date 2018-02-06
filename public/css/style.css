@@ -5,8 +5,8 @@
 
 body {
     background: linear-gradient(
-      rgba(255, 0, 0, 0.45), 
-      rgba(255, 0, 0, 0.45)
+      rgba(66, 136, 206, 0.55), 
+      rgba(66, 136, 206, 0.55)
     ), url('CR-Health-Crop-Food-Child-10-16.jpg') no-repeat center center fixed;
 	background-color: #f0db4f;
     -webkit-background-size: cover;

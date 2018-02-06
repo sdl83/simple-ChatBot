@@ -54,13 +54,7 @@ function bot(data,socket,questionNum) {
   if (questionNum == 0) {
   answer= 'Heyyyy, ' + input + ' :-)';// output response
   waitTime =2000;
-  question = 'Let\'s get started... What color are you feeling right now?';			    	// load next question
-  }
-  else if (questionNum == 1) {
-  answer= 'Cool, let\'s get some mood lighting in here.';// output response
-  socket.emit('changeBG',input.toLowerCase());
-  waitTime =3000;
-  question = 'Quick, what\'s your favorite desert?';			    	// load next question
+  question = 'Let\'s get started... what\'s your favorite desert?';			    	// load next question
   }
   else if (questionNum == 2) {
   answer= 'Wow! Yum, it\'s been a while since I\'ve had ' + input +'.';
