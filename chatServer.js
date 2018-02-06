@@ -30,7 +30,7 @@ io.on('connect', function(socket) {
   var questionNum = 0; // keep count of question, used for IF condition.
   socket.on('loaded', function(){// we wait until the client has loaded and contacted us that it is ready to go.
 
-  socket.emit('answer',"Hey, I'm Boo a simple chat bot. \nLet's explore your culinary impulses together!"); //We start with the introduction;
+  socket.emit('answer',"Hey, I'm Boo a simple chat bot. Let\'s explore your culinary impulses together!"); //We start with the introduction;
   setTimeout(timedQuestion, 5000, socket,"What is your Name?"); // Wait a moment and respond with a question.
 
 });
@@ -94,9 +94,9 @@ function bot(data,socket,questionNum) {
       waitTime = 0;
       questionNum--;
     }
-    // question = 'Whats your favorite place?';
+    question = 'Whats your favorite place?';
   // load next question
-  }
+  } 
   else{
     answer= 'We\'re done here! See you again soon.';// output response
     waitTime =0;
