@@ -54,13 +54,13 @@ function bot(data,socket,questionNum) {
   var waitTime;
 
 /// These are the main statments that make up the conversation.
-  if (questionNum == 0) {
+  if (questionNum == 4) {
   answer= 'Heyyyy, ' + input + ' :-)';// output response
   name = input;
   waitTime =2000;
   question = name + ', let\'s get started... what\'s your favorite desert?';			    	// load next question
   }
-  else if (questionNum == 4) {
+  else if (questionNum == 1) {
   answer= 'Wow! Yum, it\'s been a while since I\'ve had ' + input +'.';
   desert = input
   waitTime =3000;
@@ -84,7 +84,7 @@ function bot(data,socket,questionNum) {
   waitTime = 2000;
   question = 'Coke or Pepsi?';            // load next question
   }
-  else if (questionNum == 1) {
+  else if (questionNum == 0) {
     if(input.toLowerCase()==='coke'|| input.toLowerCase()==='coca-cola'){
       answer = 'Yup! ' + input + ' is in fact the correct answer.';
       waitTime =2000;
