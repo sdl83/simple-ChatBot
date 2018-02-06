@@ -90,7 +90,7 @@ function bot(data,socket,questionNum) {
       waitTime =2000;
     } else{
       answer='CANNOT COMPUTE! CANNOT COMPUTE! \n I\'ll ask again, I think you may have slipped on your keyboard.'
-      question='';
+      question = '';
       waitTime = 0;
       questionNum--;
     }
