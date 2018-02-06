@@ -51,7 +51,7 @@ function bot(data,socket,questionNum) {
 
 /// These are the main statments that make up the conversation.
   if (questionNum == 0) {
-  answer= 'Hello ' + input + ' :-)';// output response
+  answer= 'Heyyyy ' + input + '!! :-)';// output response
   waitTime =2000;
   question = 'Let\'s get started... What color are you feeling right now?';			    	// load next question
   }
