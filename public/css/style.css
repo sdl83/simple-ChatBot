@@ -4,8 +4,12 @@
 }
 
 body {
-    background-image: url('CR-Health-Crop-Food-Child-10-16.jpg');
+    background: url('CR-Health-Crop-Food-Child-10-16.jpg') no-repeat center center fixed;
 	background-color: #f0db4f;
+    -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
 }
 
 h1, p {
