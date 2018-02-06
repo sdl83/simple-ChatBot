@@ -73,10 +73,10 @@ function bot(data,socket,questionNum) {
       answer = "Cool... Cool..."
     } 
   waitTime = 2000;
-  question = "How does a " + desert + ' with a ' + input + ' on top sound?'
+  question = name + ", serious question: How does a " + desert + ' with a ' + input + ' on top sound?'
   }
   else if (questionNum == 3) {
-    if(input.toLowerCase()==='good'|| input.toLowerCase()==='great' || input.toLowerCase()==='yum' || input.toLowerCase()==='wow'){
+    if(input.toLowerCase()==='good'|| input.toLowerCase()==='great' || input.toLowerCase()==='yum' || input.toLowerCase()==='wow' || input.toLowerCase()==='cool'){
       answer = 'Agreed! That sounds AMAZING!';
     } else {
       answer = "Ya... I don't know... it's not my favorite."
