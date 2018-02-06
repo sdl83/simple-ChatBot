@@ -31,7 +31,7 @@ io.on('connect', function(socket) {
   socket.on('loaded', function(){// we wait until the client has loaded and contacted us that it is ready to go.
 
   socket.emit('answer',"Hey, I'm Boo a simple chat bot, built to explore your culinary impulses!"); //We start with the introduction;
-  setTimeout(timedQuestion, 10000, socket,"What is your Name?"); // Wait a moment and respond with a question.
+  setTimeout(timedQuestion, 5000, socket,"What is your Name?"); // Wait a moment and respond with a question.
 
 });
   socket.on('message', (data)=>{ // If we get a new message from the client we process it;
@@ -52,12 +52,13 @@ function bot(data,socket,questionNum) {
 /// These are the main statments that make up the conversation.
   if (questionNum == 0) {
   answer= 'Hello ' + input + ' :-)';// output response
-  waitTime =2000;
-  question = 'How old are you?';			    	// load next question
+  waitTime =3000;
+  question = 'Let\'s get started... What color best represents your mood?';			    	// load next question
   }
   else if (questionNum == 1) {
-  answer= 'Really ' + input + ' Years old? So that means you where born in: ' + (2018-parseInt(input));// output response
-  waitTime =2000;
+  answer= 'Cool, let\'s get some mood lighting in here.';// output response
+  socket.emit('changeBG',input.toLowerCase());
+  waitTime =3000;
   question = 'Where do you live?';			    	// load next question
   }
   else if (questionNum == 2) {
