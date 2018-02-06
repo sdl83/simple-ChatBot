@@ -42,14 +42,16 @@ io.on('connect', function(socket) {
     console.log('user disconnected');
   });
 });
+
+var desert;
+var name;
+
 //--------------------------CHAT BOT FUNCTION-------------------------------//
 function bot(data,socket,questionNum) {
   var input = data; // This is generally really terrible from a security point of view ToDo avoid code injection
   var answer;
   var question;
   var waitTime;
-  var desert;
-  var name;
 
 /// These are the main statments that make up the conversation.
   if (questionNum == 0) {
