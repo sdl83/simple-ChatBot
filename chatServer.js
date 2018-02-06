@@ -63,36 +63,29 @@ function bot(data,socket,questionNum) {
   }
   else if (questionNum == 2) {
   answer= 'Wow! Yum, it\'s been a while since I\'ve had ' + input +'.';
-  waitTime =2000;
+  waitTime =3000;
   question = 'I was also wondering... what\'s your favorite type of fruit?';			    	// load next question
   }
   else if (questionNum == 3) {
     if(input.toLowerCase()==='banana'|| input.toLowerCase()==='bananas'){
       answer = 'I LOVE BANANAS!';
     } else {
-      answer = "Cool. Cool."
+      answer = "Cool... Cool..."
     } 
   waitTime = 2000;
-  question = 'Can you still read the font?';			    	// load next question
+  question = 'Coke or Pepsi?';			    	// load next question
   }
   else if (questionNum == 4) {
-    if(input.toLowerCase()==='yes'|| input===1){
-      answer = 'Perfect!';
-      waitTime =2000;
-      question = 'Whats your favorite place?';
-    }
-    else if(input.toLowerCase()==='no'|| input===0){
-        socket.emit('changeFont','white'); /// we really should look up the inverse of what we said befor.
-        answer=''
-        question='How about now?';
-        waitTime =0;
-        questionNum--; // Here we go back in the question number this can end up in a loop
+    if(input.toLowerCase()==='coke'|| input.toLowerCase()==='coca-cola'){
+      answer = 'Yup! ' + input + ' is in fact the correct answer.';
     }else{
-      answer=' I did not understand you. Can you please answer with simply with yes or no.'
+      answer='CANNOT COMPUTE! CANNOT COMPUTE! \n I\'ll ask again, I think you may have slipped on your keyboard.'
       question='';
       questionNum--;
       waitTime =0;
     }
+    waitTime =2000;
+    // question = 'Whats your favorite place?';
   // load next question
   }
   else{
