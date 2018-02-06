@@ -30,7 +30,7 @@ io.on('connect', function(socket) {
   var questionNum = 0; // keep count of question, used for IF condition.
   socket.on('loaded', function(){// we wait until the client has loaded and contacted us that it is ready to go.
 
-  socket.emit('answer',"Hey, I'm Boo a simple chat bot. Let's explore your culinary impulses together!"); //We start with the introduction;
+  socket.emit('answer',"Hey, I'm Boo a simple chat bot. \nLet's explore your culinary impulses together!"); //We start with the introduction;
   setTimeout(timedQuestion, 5000, socket,"What is your Name?"); // Wait a moment and respond with a question.
 
 });
@@ -49,20 +49,22 @@ function bot(data,socket,questionNum) {
   var question;
   var waitTime;
   var desert;
+  var name;
 
 /// These are the main statments that make up the conversation.
   if (questionNum == 0) {
   answer= 'Heyyyy, ' + input + ' :-)';// output response
+  name = input;
   waitTime =2000;
-  question = 'Let\'s get started... what\'s your favorite desert?';			    	// load next question
+  question = name + ', let\'s get started... what\'s your favorite desert?';			    	// load next question
   }
-  else if (questionNum == 2) {
+  else if (questionNum == 1) {
   answer= 'Wow! Yum, it\'s been a while since I\'ve had ' + input +'.';
   desert = input
   waitTime =3000;
   question = 'I was also wondering... what\'s your favorite type of fruit?';			    	// load next question
   }
-  else if (questionNum == 3) {
+  else if (questionNum == 2) {
     if(input.toLowerCase()==='banana'|| input.toLowerCase()==='bananas'){
       answer = 'I LOVE BANANAS!';
     } else {
@@ -71,7 +73,7 @@ function bot(data,socket,questionNum) {
   waitTime = 2000;
   question = "How does a " + desert + ' with a ' + input + ' on top sound?'
   }
-  else if (questionNum == 4) {
+  else if (questionNum == 3) {
     if(input.toLowerCase()==='good'|| input.toLowerCase()==='great' || input.toLowerCase()==='yum' || input.toLowerCase()==='wow'){
       answer = 'Agreed! That sounds AMAZING!';
     } else {
@@ -80,7 +82,7 @@ function bot(data,socket,questionNum) {
   waitTime = 2000;
   question = 'Coke or Pepsi?';            // load next question
   }
-  else if (questionNum == 5) {
+  else if (questionNum == 4) {
     if(input.toLowerCase()==='coke'|| input.toLowerCase()==='coca-cola'){
       answer = 'Yup! ' + input + ' is in fact the correct answer.';
       waitTime =2000;
