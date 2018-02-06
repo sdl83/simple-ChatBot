@@ -48,6 +48,7 @@ function bot(data,socket,questionNum) {
   var answer;
   var question;
   var waitTime;
+  var desert;
 
 /// These are the main statments that make up the conversation.
   if (questionNum == 0) {
@@ -63,6 +64,7 @@ function bot(data,socket,questionNum) {
   }
   else if (questionNum == 2) {
   answer= 'Wow! Yum, it\'s been a while since I\'ve had ' + input +'.';
+  desert = input
   waitTime =3000;
   question = 'I was also wondering... what\'s your favorite type of fruit?';			    	// load next question
   }
@@ -73,9 +75,18 @@ function bot(data,socket,questionNum) {
       answer = "Cool... Cool..."
     } 
   waitTime = 2000;
-  question = 'Coke or Pepsi?';			    	// load next question
+  question = "How does a " + desert + ' with a ' + input + ' on top sound?'
   }
   else if (questionNum == 4) {
+    if(input.toLowerCase()==='good'|| input.toLowerCase()==='great' || input.toLowerCase()==='yum' || input.toLowerCase()==='wow'){
+      answer = 'Agreed! That sounds AMAZING!';
+    } else {
+      answer = "Ya... I don't know... it's not my favorite."
+    } 
+  waitTime = 2000;
+  question = 'Coke or Pepsi?';            // load next question
+  }
+  else if (questionNum == 5) {
     if(input.toLowerCase()==='coke'|| input.toLowerCase()==='coca-cola'){
       answer = 'Yup! ' + input + ' is in fact the correct answer.';
       waitTime =2000;
