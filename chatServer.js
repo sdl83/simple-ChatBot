@@ -59,7 +59,7 @@ function bot(data,socket,questionNum) {
   answer= 'Cool, let\'s get some mood lighting in here.';// output response
   socket.emit('changeBG',input.toLowerCase());
   waitTime =3000;
-  question = 'Quick, what\'s your favor desert?';			    	// load next question
+  question = 'Quick, what\'s your favorite desert?';			    	// load next question
   }
   else if (questionNum == 2) {
   answer= 'Wow! Yum, it\'s been a while since I\'ve had ' + input +'.';
@@ -82,8 +82,8 @@ function bot(data,socket,questionNum) {
     } else{
       answer='CANNOT COMPUTE! CANNOT COMPUTE! \n I\'ll ask again, I think you may have slipped on your keyboard.'
       question='';
+      waitTime = 0;
       questionNum--;
-      waitTime =2000;
     }
     // question = 'Whats your favorite place?';
   // load next question
